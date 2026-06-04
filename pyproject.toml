@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "slm_cli"
+version = "2.2.0"
+description = "A zero-dependency, ultra-tolerant verb-target command router & parser for Small Language Models (SLMs)."
+readme = "README.md"
+requires-python = ">=3.8"
+license = { file = "LICENSE" }
+authors = [{ name = "<Briche Georges>" }]
+keywords = ["llm", "slm", "agent", "function-calling", "tool-use", "fuzzy", "parser", "ollama", "local-llm"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = []          # zero external dependency: this is the core of the project
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0"]
+
+[project.urls]
+Homepage = "https://github.com/<https://github.com/Neoxotik>/slm_cli"
+Repository = "https://github.com/<xxx>/slm_cli"
+Issues = "https://github.com/<xxx>/slm_cli/issues"
+
+[tool.setuptools]
+py-modules = ["slm_cli"]   # a single module, no package
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
