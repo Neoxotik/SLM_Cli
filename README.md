@@ -349,16 +349,6 @@ Honest boundaries to keep in mind:
 
 ---
 
-## Roadmap
-
-- **Done (V2):** execution repair, async-first, Markdown cleanup.
-- **Done (V2.1):** multi-line and `|`-bearing `FreeText` values, threshold validation, idempotent `dispatch()`, safer Markdown stripping.
-- **Done (V2.2):** named, typed parameters (`Str/Int/Float/Bool/Enum`, required/default, fuzzy keys); fuzzy-ambiguity guard for similar action names; `stop_on_error` halt primitive; namespaced command names (`FILE.OPEN`) work as a convention.
-- **Deliberately out of scope** (these belong to the host application, not a command interpreter): a permissions/sandbox model, true transactional rollback (use compensating actions in your handlers — a saga), an idempotency-key cache, inter-command dependency graphs, session/memory/variables, and a per-message protocol-version field. The router stays a *router*; it gives you the seams (`execute=False`, `stop_on_error`, `raise_on_error`, structured `ParseResult`) to build those above it.
-- **Maybe later:** a number type with bounds (`Int(min=, max=)`); an optional `strict` mode leaning on Ollama's constrained decoding when available, keeping this parser as a safety net on top.
-
----
-
 ## License
 
 MIT. See [LICENSE](LICENSE).
