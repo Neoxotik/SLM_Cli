@@ -19,7 +19,7 @@ A single file, zero external dependencies, drop it in a folder and prototype an 
 
 ## Why not JSON?
 
-Small models (2B–8B) frequently break strict JSON: missing quotes, trailing commas, unclosed braces. You *can* constrain decoding (GBNF, Ollama structured outputs), but that isn't always available and it weighs down the stack.
+Small models (1B or less) frequently break strict JSON: missing quotes, trailing commas, unclosed braces. You *can* constrain decoding (GBNF, Ollama structured outputs), but that isn't always available and it weighs down the stack.
 
 `slm_cli` takes the other path: **let the model write, then repair.** A `[CMD: ...]` tag is trivial for any model to produce, and the parser absorbs the noise around it (prose, typos, casing, a forgotten bracket, a repeated tag, Markdown numbering).
 
